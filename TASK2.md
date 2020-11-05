@@ -54,6 +54,8 @@
      > > 改为[remote"orgin"]
      > >
      > > url=https：//用户名：密码@github.com/用户名/仓库名.git
+     
+     授权即可。
    
 6. 删除文件
    * 删除文件
