@@ -2,6 +2,8 @@
 
 ### git命令
 
+在文件夹内右击打开Git Bash
+
 1. 初始化(一次即可)
 
 ​      `git config --global user.name 'name'`
