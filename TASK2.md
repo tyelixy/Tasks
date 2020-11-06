@@ -25,12 +25,16 @@
 3. 进入文件
    `cd 文件名`
 
-4. 初始化新的git仓库[^1]
+4. 显示当前文件夹
+
+   `pwd`
+
+5. 初始化新的git仓库[^1]
    `git init`
 
    [^1]:是一个隐藏文件
 
-5. 上传文件
+6. 上传文件
 
    * 查看文件存储位置
 
@@ -41,14 +45,14 @@
      `git add 文件名`
 
    * 将文件上传到库
-   
+
      `git commit -m '描述'`
      
      描述中不能含有中文字符。
      
    * 将本地仓库提交到远程
      `git push`
-   
+
      > 输入用户名、密码
      >
      > > 将config中[remote"orgin"]
@@ -60,17 +64,35 @@
      > > url=https：//用户名：密码@github.com/用户名/仓库名.git
      
      授权/直接输入账号密码即可
-   
-6. 删除文件
+
+7. 删除文件
    * 删除文件
      `rm 文件名`
-   
-   * 从Git中删除
+* 从Git中删除
    `git rm 文件名`
    再提交操作
    
-7. 下载项目到本地
-   `git clone 地址`
-   
-   
-   
+8. 查看更改记录
+
+   `git log`
+
+   若记录过多在出现END后需敲q
+
+   `git log --pretty=online`
+
+9. 返回上个版本
+
+   `git reset --hard HEAD^`
+
+   `git reset --hard HEAD~1`
+
+   `git reset --hard 版本号`
+
+10. 命令记录
+
+    `git reflog`
+
+11. 下载项目到本地
+    `git clone 地址`
+
+    
