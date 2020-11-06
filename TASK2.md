@@ -100,9 +100,9 @@
 12. 下载项目到本地
 
     `git clone 地址`
-
+    
  13. 自定义命令名（未尝试）
-
-    `git config --global alias.自定义 命令`
-
-    大于一个单词用''引起   
+ 
+ `git config --global alias.自定义 命令`
+ 
+ 大于一个单词的命令需用''引起
