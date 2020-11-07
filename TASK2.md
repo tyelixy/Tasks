@@ -106,3 +106,7 @@
  `git config --global alias.自定义 命令`
  
  大于一个单词的命令需用''引起
+ 
+ 14. 下载远程库并合并
+ 
+ `git pull`
