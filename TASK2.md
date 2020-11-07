@@ -158,3 +158,9 @@
 16. 退出
 
     `exit`
+    
+17. 获取ssh密钥
+
+    `ssh-keygen -t rsa`
+
+rsa是加密方式（？）
