@@ -107,6 +107,18 @@
  
  大于一个单词的命令需用''引起
  
- 14. 下载远程库并合并
- 
- `git pull`
+14. 下载远程库并合并（失败:fatal: unable to access port 443: Timed out）
+
+    `git pull`
+
+15. 标签
+
+    `git tag -a 标签`
+
+    -a：有注释的标签
+
+    关闭编辑器：Esc+Z+Z
+
+    追加标签：`git tag -a 标签 版本号`
+
+    查看：`git log --decorate`
