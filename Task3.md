@@ -123,9 +123,9 @@ title \\描述了元素的额外信息
 
 8. 突出重要：
 
-   `<strong></strong> ` ：效果同<b>
+   `<strong></strong> ` ：效果同`<b>`
 
-   `<em></em>`:效果同<i>
+   `<em></em>`:效果同`<i>`
 
 ###### HTML头部
 
