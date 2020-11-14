@@ -123,9 +123,9 @@ title \\描述了元素的额外信息
 
 8. 突出重要：
 
-   `<strong></strong> ` ：效果同<b>
+   `<strong></strong> ` ：效果同`<b>`
 
-   `<em></em>`:效果同<i>
+   `<em></em>`:效果同`<i>`
 
 ###### HTML头部
 
@@ -177,7 +177,7 @@ title \\描述了元素的额外信息
      ```
 
 
-   锚链接`href="#锚标记"`
+   锚链接`href="#锚标记"`(锚标记通过id设置)
 
    * 实现页面内跳转（到相应位置）
 
@@ -249,9 +249,9 @@ title \\描述了元素的额外信息
 
      > 区块元素
      >
-     > > 块级元素：__显示__时常以新行开始&结束
+     > > 块级元素：__显示__时常以新行开始&结束（可以包含内联元素）
      >
-     > > 内联元素：__显示__时通常不以新行开始
+     > > 内联元素：__显示__时通常不以新行开始（不能包含块级元素）
 
      `<div>`：【块级元素】没有特定含义，可用于对文档布局，与css一起使用可以对大的内容块设置样式属性
 
@@ -322,8 +322,6 @@ title \\描述了元素的额外信息
        * pattern：正则表达式
 
 7. 按钮：`<button>显示</button>`
-
-8. 引用：`<blockquote>引用</blockquote>`                   ?
 
 9. 注释：`<abbr title="注释">内容</abbr>`
 
@@ -454,19 +452,19 @@ title \\描述了元素的额外信息
   >
   > 如果外部样式放在内部样式的后面，则外部样式将**覆盖**内部样式。
 
-### css规则
+#### css规则
 
-#### 选择器：
+##### 选择器：
 
 需要改变样式的HTML元素
 
 * id选择器
 
-> id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。（一般仅有一个）
+  > id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。（一般仅有一个）
 
-> HTML元素以id属性来设置id选择器（跟在标签名后，`>`前）
->
-> CSS 中 id 选择器以 "#" 来定义（在`<style>`标签内
+  > HTML元素以id属性来设置id选择器（跟在标签名后，`>`前）
+  >
+  > CSS 中 id 选择器以 "#" 来定义（在`<style>`标签内
 
 * class选择器
 
@@ -475,15 +473,56 @@ title \\描述了元素的额外信息
   > class 选择器在HTML中以class属性表示（跟在标签名后，`>`前）
   >
   > 在 CSS 中，类选择器以一个点"."号显示
+  
+* 层次选择器（不改变自身样式）
 
-#### 一条/多条声明：
+  * `body `：下面所有级
+  * `body>`：下一级
+  * `+`：同级相邻向下
+  * `~`：同级向下
+  
+* 属性选择器(可以是任意属性)
+
+  ~~~css
+  /*带有id的a元素*/
+  a[id]{}
+  
+  a[id=id名]{}
+  a[class="class名"]{}
+  
+  /*class中包含……的a元素*/
+  a[class*="……"]{}
+  
+  /*href以http开头的a元素*/
+  a[class^=http]{}
+  
+  /*clas以……开头的div元素（需要包含字母）*/
+  div[class$=……]{}
+  ~~~
+
+  
+
+* 结构伪类选择器
+
+  ~~~css
+  /*ul 的第一个li子元素*/
+  ul li:first child{}
+  /*当前元素的上一级元素的第n个元素，且是该元素*/
+  p:nth-child(n){}
+  /*当前元素的上一级元素的第n个该元素*/
+  p:nth-of-type(n){}
+  ~~~
+
+  
+
+##### 一条/多条声明：
 
 每条声明以分号`;`结束，整体以大括号`{}`括起
 
 * 属性：样式属性
 * 值：属性的值，与属性被冒号`:`分开
 
-##### 背景
+###### 背景
 
 | 属性                  | 说明                            | 例子                                                    |
 | --------------------- | ------------------------------- | ------------------------------------------------------- |
@@ -497,7 +536,7 @@ title \\描述了元素的额外信息
 
 （依照上表顺序）
 
-##### 文本格式
+###### 文本格式
 
 | 属性            | 说明                       | 例子                                                         |
 | --------------- | -------------------------- | ------------------------------------------------------------ |
@@ -505,9 +544,11 @@ title \\描述了元素的额外信息
 | text-align      | 对齐方式                   | h1 {text-align:center;}<br/>p.date {text-align:right;}<br/>p.main {text-align:justify;}（每一行被展开为宽度相等，左，右外边距是对齐） |
 | text-decoration | 文本修饰                   | a {text-decoration:none;}（删除链接下划线）<br/>h1 {text-decoration:overline;}<br/>h2 {text-decoration:line-through;}<br/>h3 {text-decoration:underline;} |
 | text-transform  | 指定一个文本中的大小写字母 | p.uppercase {text-transform:uppercase;}(全部大写）<br/>p.lowercase {text-transform:lowercase;}（全部小写）<br/>p.capitalize {text-transform:capitalize;}（单词首字母大写） |
+| line-height     | 行高                       |                                                              |
 | text-indent     | 指定文本的第一行的缩进     | p {text-indent:50px;}                                        |
+| vertical-align  | 水平对齐                   | img，span{<br>vertical-align:middle<br>}                     |
 
-##### 字体
+###### 字体
 
 | 属性        | 说明                                           | 例子                                                         |
 | ----------- | ---------------------------------------------- | ------------------------------------------------------------ |
@@ -519,7 +560,7 @@ title \\描述了元素的额外信息
 >
 > 1em和当前字体大小相等，在浏览器中默认的文字大小是16px，因此，1em的默认大小是16px。
 
-##### 链接
+###### 链接
 
 属性：
 
@@ -530,40 +571,31 @@ title \\描述了元素的额外信息
 
 可以设置背景颜色，字体颜色，进行文本修饰等。
 
-##### 列表
+`a.class:hover{}`
+
+###### 列表
 
 属性：
 
 * list-style-type:
 
-  | 有序                    | 无序   |
-  | ----------------------- | ------ |
-  | upper-roman（罗马数字） | circle |
-  | lower-alpha（小写字母） | square |
+  | 有序                    | 无序            |
+  | ----------------------- | --------------- |
+  | upper-roman（罗马数字） | circle          |
+  | lower-alpha（小写字母） | square          |
+  |                         | none            |
+  |                         | decimal（数字） |
 
 * list-style-image: url()
 
   指定列表项标记的图像
-
-##### css盒子模型
-
-![盒子模型](https://www.runoob.com/images/box-model.gif)
-
-* Margin——外边距【透明】
-
-  两个盒子靠在一起外边距取大的。
-
-* Border——边框
-
-* Padding——内边距【透明】
-
-* Content——内容（宽度通过width设置）
 
 1. 边框
 
    属性：
 
    * 边框宽度：border-width
+
      * 具体值（单位px或em）
      * 关键字：think，dium，thin（具体宽度可自定义）
 
@@ -583,6 +615,217 @@ title \\描述了元素的额外信息
 
      > 需要先设置边框样式
 
-### css注释
+###### display
+
+* block：块元素
+* inline：行内元素
+* inline-block：是块元素，但可以内联
+
+###### float
+
+* clear：元素周围不允许有浮动元素
+  * right：右侧
+  * both：两侧
+
+父级元素塌陷问题:
+
+1. 增加父级元素高度
+
+2. 增加一个空的`<div>`清除浮动
+
+3. overflow：hidden；
+
+4. 在父类添加一个伪类
+
+   ~~~css
+   #id：after{
+       content：'';
+       display:block;
+       clear:both;
+   }
+   ~~~
+
+###### 定位
+
+1. 相对定位
+2. 绝对定位（相对父级元素或浏览器）
+3. 固定定位
+
+###### 层级
+
+需先定位
+
+`z-index：number`（number大的在上层，number>0）
+
+透明度：`opacity:`
+
+##### css注释
 
 /* 注释*/
+
+##### css盒子模型
+
+![盒子模型](https://www.runoob.com/images/box-model.gif)
+
+* Margin——外边距【透明】
+
+  两个盒子靠在一起外边距取大的。
+
+* Border——边框
+
+* Padding——内边距【透明】
+
+* Content——内容（宽度通过width设置）
+
+
+
+### JavaScript
+
+> 脚本语言
+
+##### 引入
+
+* 内部引入
+
+  ```html
+  <script>
+      //……
+  </script>
+  ```
+
+* 外部引入
+
+  ```html
+  <script src=""></script>
+  ```
+
+  
+
+##### 基本语法
+
+JavaScript严格区分大小写。
+
+1. 定义变量
+
+   `变量类型 变量名 = 变量值`
+
+   变量类型：var
+
+   局部变量：let
+
+   * 数据类型
+
+     * 数
+
+       js不区分小数和整数
+
+       ```javascript
+       123 //整数
+       123.1 //浮点数           判断浮点数大小Math.abs()<0.0000001   其中Math.abs()是求绝对值
+       1.123e3 //科学计数法
+       -1 //负数
+       NaN //not a number
+       Infinity //无穷大（数值超范围）
+       ```
+
+     * 字符串
+
+       `'abc'    `
+
+       `   "abc"`
+
+     * 布尔值
+
+       true
+
+       false
+
+     * 数组
+
+       不需要同类型对象
+
+       如果越界会报undefined
+
+     * 对象
+
+       用大括号，每个属性之间用逗号隔开
+
+       ```javascript
+       var person ={
+           name:"abc",
+           age:3,
+           tags:['a','b','...']
+       }
+       ```
+
+       
+
+     * null（空）和undefined（未定义）
+
+2. 运算符
+
+   * 逻辑运算符
+
+     * 和：&&
+     * 或：||
+     * 非：！
+
+   * 比较运算符
+
+     * == 等于（值一样即为true）
+     * === 绝对等于（类型也需一样才为true）
+
+     另：NaN===NaN结果为false
+
+     ​        NaN与所有数值不相等，包括自己
+
+     ​	    只能通过isNaN判断`isNaN()`
+
+     
+
+3. 条件控制
+
+   ```javascript
+   if(){
+      
+      }
+   else if(){
+           
+           }
+   else 
+   ```
+
+4. 输出
+
+   * 弹出警告框
+
+     `alert()`
+
+     `window.alert()`
+
+   * 将内容写入HTML文档
+
+     `document.write()`
+
+   * 写入HTML元素
+
+     `innerHTML`
+
+   ```javascript
+   document.getElementById("id").innerHTML="内容"
+   //document.getElementById("id")使用id属性查找HTML元素
+   //innerHTML="内容"用于修改元素的HTML内容
+   ```
+
+   可以在文本字符串中使用反斜杠`\`对代码行进行换行。
+
+   * 在浏览器控制台打印变量
+
+   ```javascript
+   console.log(变量名)
+   ```
+
+   
+
+   
+
