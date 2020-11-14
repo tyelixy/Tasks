@@ -1,0 +1,69 @@
+
+.title1 {
+    line-height: 400px;
+    height: 400px;
+    text-align:center;
+    font-family: "隶书","宋体";
+    letter-spacing: 2em;  
+    font-size:50px;
+    background-image:url(../source/background1.png);
+    background-size: 40em;
+    background-position:center;
+}
+#introduction {
+    font-family:"隶书","楷体","宋体";
+    font-size:27px;
+    text-indent:54px;
+    color: rgb(155, 174, 170);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.box1  {
+    font-family: "隶书","宋体";
+    color:rgb(54, 57, 63);
+    margin: 50px 55px;
+    font-size:40px;
+    word-spacing:85px;
+    background-color: rgb(226, 240, 237);
+}
+    a{
+     color:rgb(0, 0, 0);
+     text-decoration: none;
+     }
+  a:hover{
+     color:rgb(155,150,150);
+     font-size: 1.1em;
+    }
+ #mv{
+     width: 1000px;
+     height: 500px;
+     padding:0px 250px;
+     border: none;
+     background-image:url(../source/background2.png);
+     background-size: 2500px ;
+     background-position:center;
+     background-repeat: no-repeat;
+ }
+ .text{
+     font-family: "隶书","楷书","宋体";
+     font-size: 20px;
+     text-indent:2em;
+     margin: 0px 55px;
+ }
+.center{
+    margin:0px 700px;
+    font-family: "隶书","楷书","宋体";
+}
+h2[id]{
+    text-align: center;
+}
+.center1{
+     margin:0px 350px 0px 400px;
+     padding: 0ex 50px 0px 0px;
+     border-radius: 100px 0px;
+}
+.back{
+    background-image:url(../source/background1.png);
+    background-size: 1400px;
+    background-position:center;
+}
