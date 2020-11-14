@@ -139,7 +139,7 @@
 
  大于一个单词的命令需用''引起
 
-14. 下载远程库并合并（失败:fatal: unable to access port 443: Timed out）
+14. 下载远程库并合并
 
     `git pull`
 
