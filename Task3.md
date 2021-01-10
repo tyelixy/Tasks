@@ -825,7 +825,124 @@ JavaScript严格区分大小写。
    console.log(变量名)
    ```
 
-   
 
+##### 操作BOM对象
+
+BOM：浏览器对象模型
+
+1. window：浏览窗口
+
+2. Navigator：封装了浏览器的信息
+
+   大多数时候不使用`navigator`
+
+3. screen：代表屏幕尺寸
+
+4. location：代表当前页面的URL信息
+
+~~~JavaScript
+host："space.bilibili.com"
+href：               // 网址
+protocol："https:"
+reload：f reload()   // 刷新网页
+location.assign('网址') //重定位（跳转网页）
+~~~
+
+5. document：当前页面，HTML DOM文档树
+
+   ~~~JavaScript
+   //获得具体文档树节点
+   <dl id="app">
+       <dt>java</dt>
+   	<dd>javaSE</dt>
+   	<dd>javaEE</dd>
+   </dl>
    
+   <script>
+       var dl=document.getElementById('app');
+   </script>
+   //获取cookie
+   document.cookie
+   ~~~
+
+6. history：浏览器的历史记录
+
+##### 操作DOM对象
+
+浏览器网页就是一个DOM树形结构。
+
+* 更新
+* 遍历
+* 删除
+* 添加
+
+要操作一个DOM节点，必须要先获得这个DOM节点。
+
+~~~JavaScript
+<div id="father">
+    <h1>标题一</h1>
+    <p id="p1">p1</p>
+    <p class="p2">p2</p>
+</div>
+
+<script>
+    //对应css选择器
+    var h1=document.getElementsByTagName("h1");
+    var p1=document.getElementById("p1");
+    var p2=document.getElementsByClassName("p2");
+    var father=document.getElementById("father");
+    //获取父节点下的所有子节点
+    var children=father.children;
+
+</script>
+~~~
+
+更新节点
+
+~~~JavaScript
+id1.innerText='……'//修改文本的值
+id1.innerHTML='<strong>123</strong>'//解析HTML文本标签
+
+id.style.color='red';
+id.style.fontSize='20px';
+~~~
+
+删除节点
+
+先获取父节点，通过父节点删除子节点
+
+~~~JavaScript
+father.removeChild();
+~~~
+
+插入节点
+
+~~~JavaScript
+<p id="js">JavaScript</p>
+<div id="list">
+    <p id="me">javaME</p>
+    <p id="se">javaSE</p>
+    <p id="ee">javaEE</p>
+</div>
+
+<script>
+    var js=document.getElementById('js');
+    var list=document.getElementById('list');
+    list.appendChild(js);//移到节点
+    `效果
+	<div id="list">
+    	<p id="me">javaME</p>
+    	<p id="se">javaSE</p>
+    	<p id="ee">javaEE</p>
+		<p id="js">JavaScript</p>
+	</div>`
+    
+    //创建一个新标签
+    var newP=document.createElement('p');
+    newP.id='newP';
+    newP.innerText="hello";
+    list.appendChild(newP);
+    
+</script>
+~~~
 

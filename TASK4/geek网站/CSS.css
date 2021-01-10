@@ -1,0 +1,313 @@
+body{
+    overflow-x: hidden;
+    font-family: FZYaoti;
+    margin: 0px;
+    padding: 0px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navigation {
+    background-color: #fff4c3;
+    border-radius: 50%;
+    height: 3.2vw;
+    width: 92vw;
+    margin: 0.1vw 1vw;
+    position: fixed;
+    top: 0.5vw;
+    padding: 0.2vw 0vw 0.2vw;
+    text-align: center;
+    list-style-type: none;
+    z-index: 999;
+}
+.picture1{
+    margin: 5vw 0px;
+    width: 25vw;
+}
+
+li{
+    display: inline;
+    margin: 0vw 2.5vw;
+}
+
+#top{
+    margin: 3.5vw 2vw 0vw 2vw;
+    padding: 0px;
+    width: 94vw;
+    height: 55vw;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-image: url(../Phase-IV-Annex/附件/images/首页背景.png);
+    background-size: 100%;
+    text-align: center;
+}
+
+a{
+    font-family: FZYaoti;
+    color:rgb(54, 57, 63);
+    margin: 1vw 1vw;
+    font-size:1.8vw;
+    font-weight: 500;
+    text-decoration: none; 
+}
+
+#map0 {
+    font-size: 2.5vw;
+    font-weight:900;
+    color: rgb(97, 97, 97);
+}
+
+#map1 {
+    height: 13vw;
+    background-image: url(../Phase-IV-Annex/附件/images/过渡花纹.png);
+    text-align:center;
+    background-position: top;
+    margin: 0vw;
+    margin-bottom: 5vw;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    font-size: 5vw;
+}
+
+#introduction1{
+    background-image: url(../Phase-IV-Annex/附件/images/houzi.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 45vw;
+    background-size: 45%;
+    margin: 2vw 10vw;
+}
+#introduction2{
+    background-image: url(../Phase-IV-Annex/附件/images/chanpin.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 45vw;
+    background-size: 45%;
+    margin: 2vw 10vw;
+}
+#introduction3{
+    background-image: url(../Phase-IV-Annex/附件/images/ai.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 45vw;
+    background-size: 50%;
+    margin: 2vw 10vw;
+}
+#introduction4{
+    background-image: url(../Phase-IV-Annex/附件/images/anquan.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 45vw;
+    background-size: 45%;
+    margin: 2vw 10vw;
+}
+
+.intro_11{
+    font-size: 3.5vw;
+    font-weight: 500;
+}
+.intro_21{
+    font-size: 2.8vw;
+    font-weight: 400;
+    color: #7bd3ff;
+    margin-top: 0.7vw;
+    margin-bottom: 1vw;
+}
+.intro_31{
+    font-size: 2vw;
+    margin-top: 1vw;
+}
+
+.intro_12{
+    font-size: 3.5vw;
+    font-weight: 500;
+    margin-left: 37vw;
+}
+.intro_22{
+    font-size: 2.8vw;
+    font-weight: 400;
+    color: #8d2b85;
+    margin-top: 0.7vw;
+    margin-bottom: 1vw;
+    margin-left: 37vw;
+}
+.intro_32{
+    font-size: 2vw;
+    margin-top: 1vw;  
+    margin-left: 37vw;  
+}
+
+#map2 {
+    height: 15vw;
+    text-align:center;
+    margin: 0vw 10vw;
+    margin-bottom: 5vw;
+    background-repeat: no-repeat;
+    font-size: 5vw;
+    display:inline;
+}
+
+.right{
+    background-image: url("../Phase-IV-Annex/附件/images/youshang.png");
+    background-size: 35%;
+    background-repeat: no-repeat;
+    height: 5vw;
+    width: 25vw;
+    background-position: left;
+    display:inline-block;
+    margin: 0vw;
+}
+
+.left{
+    background-image: url("../Phase-IV-Annex/附件/images/youshang.png");
+    background-size: 35%;
+    background-repeat: no-repeat;
+    height: 5vw;
+    width: 25vw;
+    background-position: right;
+    display:inline-block;
+    margin: 0vw;
+    margin-left: 5vw;
+}
+
+#alltips{
+    text-align: center;
+    background-position: 73vw 16vw;
+    background-repeat: no-repeat;
+    background-image: url(../Phase-IV-Annex/附件/images/hudie.png);
+    background-size: 10vw;
+}
+
+
+.tips{
+    display: inline-block;
+    border: solid 0.5vw rgb(148, 137, 192);
+    border-radius: 7%;
+    height: 21vw;
+    width: 12vw;
+    margin: 5vw 2vw;
+}
+
+.tips1{
+    padding-top: 1vw;
+    width: 8vw;
+    height: 11vw;
+    text-align: center;
+}
+.tips2{
+    text-align: left;
+    padding-top: 0.5vw;
+    padding-left: 0.3vw;
+    width: 8vw;
+    padding-left: 2vw;
+}
+
+#map3 {
+    height: 7vw;
+    text-align:center;
+    margin: 0vw 30vw;
+    margin-bottom: 2vw;
+    position: relative;
+    top:-3.5vw;
+    
+}
+#qa{
+    background-image: url(../Phase-IV-Annex/附件/images/lansebeijing.png);
+    background-position: bottom;
+    background-size: 125vw;
+    margin: 0px;
+    padding: 0px;
+}
+
+.q{
+    margin: 0vw 20vw;
+    font-size: 1.5vw;
+    color: white;
+    padding-bottom: 1vw;
+}
+.a{
+    margin: 0vw 21vw;
+    font-size: 1.5vw;
+    color:black;
+    padding-bottom: 3vw;
+}
+
+#map4 {
+    height: 7vw;
+    margin: 0vw;
+    margin-right: 5vw;
+    display:inline; 
+}
+
+#cttitle{
+    background-image: url(../Phase-IV-Annex/附件/images/yezi1.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 7vw;
+    width: 7vw;
+    height: 7vw;
+    display: inline-block;
+}
+
+#contact{
+    background-image: url(../Phase-IV-Annex/附件/images/树.png);
+    background-repeat: no-repeat;
+    background-position: 75vw;
+    background-size: 20%;
+    height: 36vw;
+    margin: 2vw 8vw;
+    margin-bottom: 10vw;
+    position: relative;
+}
+
+#ctpicture1{
+    display: inline-block;
+    background-image: url(../Phase-IV-Annex/附件/images/橘色变色龙.png);
+    background-repeat: no-repeat;
+    background-size: 50vw;
+    background-position: right;
+    width: 30vw;
+    height: 25vw;
+    position: absolute;
+    left: 45vw;
+    top: 11vw
+}
+
+#contactmsg{
+    display: inline-block;
+    position: absolute;
+    right: 2vw;
+    top:3vw;
+    width: 70vw;
+    height: 20vw;
+    color: #49645b;
+    font-size: 1.7vw;
+    user-select: none;
+}
+
+#ctchoice{
+    display: inline-block;    
+    position: absolute;
+    left: 19.5vw;
+    top: 15vw
+}
+
+.choice{
+    display: inline-block;
+    background-color: #49645b;
+    font-weight: 600;
+    height: 3vw;
+    width: 8vw;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 3vw;
+    padding: 0vw;
+    border-radius: 10px;
+    font-size: 1.5vw;
+    border: none;
+    z-index: 2;
+    outline: 0;
+    user-select: none;
+}
