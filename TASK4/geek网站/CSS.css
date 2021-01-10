@@ -3,6 +3,7 @@ body{
     font-family: FZYaoti;
     margin: 0px;
     padding: 0px;
+    user-select: none;
 }
 *{
     margin: 0px;
@@ -59,6 +60,11 @@ a{
     color: rgb(97, 97, 97);
 }
 
+#map0:hover{
+    font-weight:900;
+    color: rgb(146, 145, 145);
+}
+
 #map1 {
     height: 13vw;
     background-image: url(../Phase-IV-Annex/附件/images/过渡花纹.png);
@@ -70,6 +76,7 @@ a{
     background-size: 90%;
     font-size: 5vw;
 }
+
 
 #introduction1{
     background-image: url(../Phase-IV-Annex/附件/images/houzi.png);
@@ -223,15 +230,27 @@ a{
 
 .q{
     margin: 0vw 20vw;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
+    font-family: FZYaoti;
+    width: 60vw;
+    height: 4vw;
+    text-align: left;
     color: white;
     padding-bottom: 1vw;
+    background-color:rgb(141, 196, 255);
+    border: none;
+    outline: none;
+}
+.q:hover{
+    background-color:rgb(193, 223, 255);
+    color: rgb(43, 132, 226);
 }
 .a{
     margin: 0vw 21vw;
     font-size: 1.5vw;
     color:black;
-    padding-bottom: 3vw;
+    padding-top: 0.3vw;
+    padding-bottom: 2vw;
 }
 
 #map4 {
@@ -310,4 +329,9 @@ a{
     z-index: 2;
     outline: 0;
     user-select: none;
+}
+
+.choice:hover{
+    background-color: #ffffff;
+    color: #49645b;
 }

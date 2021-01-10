@@ -7,8 +7,7 @@
         <script src="JavaScript.js"></script>
     </head>
 
-    <body>
-        
+    <body onload="start()">
         <div id="top">
             <ul class="navigation">
                 <li>
@@ -183,11 +182,11 @@
         <div id="qa">
             <div ><img id="map3" src="../Phase-IV-Annex/附件/images/gengduo.png" alt="more"></div>
             <div>
-                <div class="q">1.什么是Geek(极客)？Geek精神又是什么？</div>
+                <button class="q" onclick="q(1)">1.什么是Geek(极客)？Geek精神又是什么？</button>
                 <div class="a">拥有好奇之心，改变之力，爱钻研，能折腾。</div>
             </div>
             <div>
-                <div class="q">2.招新是安排在什么时间？</div>
+                <button class="q" onclick="q(2)">2.招新是安排在什么时间？</button>
                 <div class="a">
                     按照惯例，正式招新时间是在9月下旬~10月上旬，不过今年会有一些改动，
                     笔试地点一般在9号教学楼。 如果想要了解我们，可以加入我们的QQ群，招
@@ -195,7 +194,7 @@
                 </div>
             </div>
             <div>
-                <div class="q">3.我们有考核吗？考核流程是怎样的呀？</div>
+                <button class="q" onclick="q(3)">3.我们有考核吗？考核流程是怎样的呀？</button>
                 <div class="a">
                     嗯...我们一共有一轮笔试和两轮面试。权衡技术、经验和学习能力，第一轮
                     是一些视野性的题目，淘汰率并不高。第二轮单独面试，根据你的笔试提出
@@ -206,7 +205,7 @@
                 </div>
             </div>
             <div>
-                <div class="q">4.考核是怎样的形式？</div>
+                <button class="q" onclick="q(4)">4.考核是怎样的形式？</button>
                 <div class="a">
                     在考核期间每人会拥有一位'长者'带你入门，学习技术与知识，交流经验与
                     想法。完成每周的新人任务后再进行一次考核筛选后就可以成为Geek组正式
@@ -215,7 +214,7 @@
                 </div>
             </div>
             <div>
-                <div class="q">5.进入Geek组之后都有什么福利呢？</div>
+                <button class="q" onclick="q(5)">5.进入Geek组之后都有什么福利呢？</button>
                 <div class="a">
                     1对1的新人指引，每一个成员都有会一个mentor, 带你初入门槛，与你一同成
                     长，组内管理较宽松,在尊重其他人的前提下可以尽情发挥自己的个性。打破
@@ -224,7 +223,7 @@
                     </div>
             </div>
             <div>
-                <div class="q">6.进入团队会影响我的日常学习吗？</div>
+                <button class="q" onclick="q(6)"">6.进入团队会影响我的日常学习吗？</button>
                 <div class="a">
                     你要知道大学是一个可以自由安排自己学习生活的地方。如果你想在上课之余
                     充实自己、激励自己，最好的方法就是和比自己更优秀的人在一起。团队不缺优
@@ -234,7 +233,7 @@
                     </div>
             </div>
             <div>
-                <div class="q">7.老师以及学长学姐们的期望是什么?</div>
+                <button class="q" onclick="q(7)">7.老师以及学长学姐们的期望是什么?</button>
                 <div class="a">
                     我们希望你有很强的自学能力，同时关注新事物、新技术，喜欢挑战，逻辑性强，
                     善于和各种文化的人合作.“每个人都可以做自己想做的事情，每个人的方向不一样。
