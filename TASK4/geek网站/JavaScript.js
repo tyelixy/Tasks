@@ -48,3 +48,62 @@ function q(i){
         a[i-1]=false;
     }
 }
+function biger1(){
+    var t=0;
+    var k=25;
+    var p=document.getElementById("picture1");
+    var timer=setInterval(function(){
+            p.style.width=k+'vw';
+            t++;
+            k=k+0.5;
+            if(t===10){
+                clearInterval(timer);   
+            }      
+    },15);
+}
+function smaller1(){
+    var t=0;
+    var k=29.5;
+    var p=document.getElementById("picture1");
+    var timer=setInterval(function(){
+            p.style.width=k+'vw';
+            t++;
+            k=k-0.5;
+            if(t===10){
+                clearInterval(timer);   
+            }      
+    },15);
+}
+function biger2(){
+    var t=0;
+    var k=2.5;
+    var p=document.getElementById("map0");
+    var timer=setInterval(function(){
+            p.style.fontSize=k+'vw';
+            t++;
+            k=k+0.05;
+            if(t===10){
+                clearInterval(timer);   
+            }      
+    },15);
+}
+function smaller2(){
+    document.getElementById("map0").style.fontSize='2.5vw';    
+}
+function white(p){
+    var k1=55;
+    var k2=55;
+    var k3=55;
+    var timer=setInterval(function(){
+        p.style.color='rgb('+k1+','+k2+','+k3+')';
+        k1=k1+5;
+        k2=k2+5;
+        k3=k3+5;
+        if(k1===255){
+            clearInterval(timer);   
+        }      
+},10);
+}
+function black(p){
+    p.style.color='rgb(54,57,63)';
+}

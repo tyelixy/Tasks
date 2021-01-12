@@ -23,9 +23,11 @@ body{
     list-style-type: none;
     z-index: 999;
 }
-.picture1{
+#picture1{
     margin: 5vw 0px;
     width: 25vw;
+    position: relative;
+    left: 1.5vw;
 }
 
 li{
