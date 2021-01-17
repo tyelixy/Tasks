@@ -431,8 +431,6 @@
    
        引用函数时不用加`module.`
    
-     
-   
 9. 类
 
    * 方法`__init__()`
@@ -482,7 +480,33 @@
 
 10. 文件操作
 
+    ~~~python
+    with open('pi_digits.txt') as f:#关键字with在不再需要访问文件后将其关闭
+        contents=f.read()#读取文件的全部内容并将其作为字符串赋给contents
+    print(contents)#read()到达文件末尾时会返回一个空字符串，print显示空行
+    words=contents.split#以空格为分隔符将字符串拆分成多个部分
+    
+    with open('pi_digits.txt') as f:
+    	for line in f:#逐行读取，每行后有换行符
+            print(line)
+            
+    with open('pi_digits.txt','r') as f:#以读取模式打开文件
+        lines=f.readlines()#创建一个包含文件各行内容的列表
+        
+    with open('programming.txt','w') as f:#以只写的方式打开文件（附加模式'a'，读写模式'r+''
+        f.write("This is a test.")#写入文件
+    ~~~
+
 11. 异常
+
+    ~~~python
+    #使用try-except代码块
+    try:
+    except 异常:
+    else:#只有try成功执行后才执行的内容
+    ~~~
+
+    
 
 12. 测试
 
