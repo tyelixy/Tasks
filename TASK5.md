@@ -149,12 +149,14 @@
 
      > for语句没有大括号`{}`，for语句末尾有冒号`:`，通过缩进判断哪些内容属于for循环内
 
+     在for循环中修改列表可能导致Python难以跟踪其中的元素（使用while循环代替）
+
    * 数值列表
 
      * 函数range()
 
        生成一系列数（左闭右开）
-
+   
        ~~~python
        for v in range(1,5):
            print(v)
@@ -168,11 +170,11 @@
        nums1=list(range(1,6))
        nums2=list(range(1,11,2))#可以指定步长，nums2=[1, 3, 5, 7, 9]
        #列表解析
-       squares=[v**2 for v in range(1,11)]#[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+    squares=[v**2 for v in range(1,11)]#[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
        ~~~
 
      * 简单的统计计算
-
+   
        ~~~python
        >>>nums=[1,2,3,4,5,6,7,8,9,0]
        >>>min(nums)
@@ -180,19 +182,19 @@
        >>>max(nums)
        9
        >>>sum(nums)
-       45
+    45
        ~~~
 
    * 切片
 
      列表的部分元素
-
+   
      ~~~python
      nums=['one','two','three','four','five']
      print(nums[0:3])#左闭右开
      print(nums[:3])#默认从头开始
      print(nums[-3:])#从倒数第三位开始，到列表末尾结束
-     nums2=nums[:]#获得了nums的副本，是两个列表
+    nums2=nums[:]#获得了nums的副本，是两个列表
      ~~~
 
    * 元组
@@ -200,6 +202,355 @@
      值不可变的列表，但对存储元组的变量重新赋值是可以的（重新定义整个元组）
 
      使用小括号`()`进行标识
-
+   
      > 严格来说，元组使用逗号`,`而非圆括号`()`进行标识，如果定义只有一个元素的元组，需在这个元素后加上逗号`,`
+   
+4. if语句
 
+   1. 条件测试
+
+      相等`==`
+
+      不相等`!=`
+
+      检查多个条件
+
+      * 和     `and`
+      * 与     `or`
+
+      > C语言中分别使用`&&`和`||`
+
+      检查特定的值是否在列表中`in`
+
+      检查特定的值是否不在列表中`not in`
+
+   2. if语句
+
+      ~~~python
+      if conditional_test:
+          do something
+      ~~~
+
+      > 条件测试不用`()`包裹，if语句后有`:`，整个语句不包含`{}`,通过缩进确定哪些内容属于if语句内
+
+   3. if-else语句
+
+      ~~~python
+      age=17
+      if age>=18:
+          print("yes")
+      else:
+          print("no")
+      ~~~
+
+      > else后也要加`:`
+
+   4. if-elif-if结构
+
+      ~~~python
+      age=18
+      if age>18:
+          print("yes")
+      elif age==18:
+          print("on")
+      else:
+          print("no")
+      ~~~
+
+      * else代码可不写
+      * 可以根据需要写任意数量的elif语句
+
+      > elif语句前为`elif`而不是`else if`，elif语句条件表达式后有`:`
+
+   5. 处理列表
+
+      * 当列表名用作条件表达式时：若列表中有元素，返回True；若列表为空，返回False
+
+5. 字典
+
+   字典是一系列==键值对==，每一个键都与一个值相关联。
+
+   可以通过键来访问值，与键相关的值可以是任何Python对象
+
+   ~~~python
+   pencil={'color':'blue','hardness':'HB','cost':1}
+   ~~~
+
+   * 添加键值对
+
+     字典是一种动态结构
+
+     ~~~python
+     pencil={}
+     pencil['hardness']='HB'
+     pencil['color']='blue'
+     ~~~
+
+   * 修改字典中的值
+
+     ~~~python
+     pencil={'color':'blue','hardness':'HB','cost':1}
+     pencil['color']='green'
+     ~~~
+
+   * 删除键值对
+
+     ~~~python
+     pencil={
+         'color':'blue',
+         'hardness':'HB',
+         'cost':1,#方便添加下一行
+     	}
+     del pencil['cost']
+     ~~~
+
+   * 访问值
+
+     ~~~python
+     pencil={'color':'blue','hardness':'HB'}
+     print(pencil['color'])
+     print(pencil.get('cost','not have'))#括号内为（键，指定键不存在时返回的值）
+     ~~~
+
+   * 遍历
+   
+     ~~~python
+     pencil={'color':'blue','hardness':'HB','cost':1}
+     for key,value in pencil.items():#items()返回一个键值对列表
+         print(f'\nkey:{key}\nvalue:{value}')
+     ~~~
+   
+     可以通过方法`key()`获取字典中所有的键，`value()`获取字典中所有的值
+   
+6. 用户输入
+
+   ~~~python
+   message=input("please input something")
+   age=int(input("How old are you?"))
+   ~~~
+
+   > 使用函数`input()`获取用户输入，括号内为提示内容
+   >
+   > 使用`input()`获取的内容为字符串
+   >
+   > 使用函数`int()`将字符串转为数值
+
+7. while循环
+
+   ~~~python
+   num=1
+   while num<=5:
+       print(num)
+       num+=1
+   ~~~
+
+   >条件表达式不用`()`包裹，后有`:`，整个语句不包含`{}`,通过缩进确定哪些内容属于while语句内
+
+   * break：跳出循环
+   * continue：返回循环开头，根据条件测试结果判断是否继续循环
+   
+8. 函数
+
+   ~~~python
+   def greet_user():#def关键字定义函数
+       """显示简单的问候语"""#文档字符串
+       print(Hello!)
+   ~~~
+
+   > 函数定义语句`()`后有`:`，整个语句不包含`{}`,通过缩进确定哪些内容属于函数内容
+
+   * 传递实参
+   
+     * 位置实参
+   
+       ~~~python
+       def p_num(num1,num2):
+           """打印传入的内容"""
+           print(num1)
+           print(num2)
+       p_num('one','two')#按顺序传入
+       ~~~
+   
+     * 关键字实参
+   
+       ~~~python
+       def p_num(num1,num2):
+           """打印传入的内容"""
+           print(num1)
+           print(num2)
+       p_num(num2='one',num1='two')
+       ~~~
+   
+     * 默认值
+   
+       ~~~python
+       def p_num(num1,num2='two'):#有默认值的参数放在后面
+           """显示简单的问候语"""
+           print(num1)
+           print(num2)
+       p_num(num1='two')#有默认值的可以不传入
+       ~~~
+   
+     * 传递任意数量的实参
+   
+       ~~~python
+       def p_num(*num):#创建了一个新元组，这样的参数需放在最后
+       def p_num2(**num):#创建了一个新字典，这样的参数需放在最后
+       n=p_num2(one="1",two="2")
+       ~~~
+   
+   * 返回值
+   
+     关键词`return`
+   
+   * 导入
+   
+     * 导入模块
+   
+       ~~~python
+       import module_name
+       ~~~
+   
+     * 导入特定函数
+   
+       ~~~python
+       from module_name import function_name1,function_name2
+       ~~~
+   
+     * 指定别名
+   
+       ~~~python
+       import module_name as m
+       ~~~
+   
+     * 导入模块中所有函数
+   
+       ~~~python
+       from module_name import *
+       ~~~
+   
+       引用函数时不用加`module.`
+   
+     
+   
+9. 类
+
+   * 方法`__init__()`
+
+     通过类创建对象时会自动调用这个方法，并传入参数`self`（一个指向实例本身的引用）
+
+     > 构造器？
+
+   * ~~~python
+     class Dog:
+         def __init__(self,name,age):
+             self.name=name
+             self.age=age#可以在__init__()方法中对属性赋默认值
+     
+         def sit(self):
+             print(f'{self.name} is sitting.')
+         def set_age(self,age):
+             if age>0 and age<20:
+                 self.age=age
+     
+     dog=Dog("Willie",6)#创建实例，可以根据需求创建任意数量的实例
+     print(dog.age)#直接访问属性
+     dog.sit()#调用方法
+     dog.set_age(7)#通过方法修改属性
+     ~~~
+
+   * 继承
+
+     在既有类的基础上编写新类时，通常要调用父类方法的`__init__()`
+
+     ~~~python
+     class Animal:
+         def __init__(self,name,age):
+             self.name=name
+             self.age=age
+     
+         def sit(self):
+             print(f'{self.name} is sitting.')
+     class Dog(Animal):
+         def __init__(self,name,age):
+             """初始化父类属性"""
+             super().__init__(name,age)
+     #可以增加子类特有的属性和方法，也可以重写父类方法（与父类方法名相同，对参数列表无要求）
+     ~~~
+
+   * 导入类（参考导入函数）
+
+10. 文件操作
+
+11. 异常
+
+12. 测试
+
+### 面向对象编程（OOP）
+
+> ==以类的方式组织代码，以对象的形式封装数据。==
+
+##### 核心：抽象
+
+##### 三大特性
+
+1. 封装
+2. 继承
+3. 多态
+
+##### 类和对象
+
+> 从认识论角度考虑：先有对象后有类
+
+__对象__ 是具体的事物，__类__ 是对__对象__的抽象。
+
+> 从代码运行角度考虑：先有类后有对象
+
+__类__是__对象__的模板。
+
+##### 三大特性
+
+* 封装
+
+  * 属性私有
+
+    在属性名前添加`__`
+
+    _（实际上是改变了调用时属性的名字）_
+
+    提供一些可以操作这个属性的方法（get、set方法）
+
+  * 作用
+
+    1. 提高程序安全性，保护数据
+    2. 隐藏代码的实现细节
+    3. 统一接口
+    4. 系统可维护性增加
+
+* 继承
+
+  * 子类是父类的扩展，子类继承父类
+
+  * 继承是类与类之间的一种关系，除此之外还有依赖、组合、聚合等
+
+  * 继承关系的两个类，一个为子类（派生类），一个为父类（基类），
+
+    子类与父类之间，意义上讲应具有“is a”的关系
+
+* * 函数`super()`
+
+    调用父类的属性或方法
+
+* 多态
+  * 重写：方法的重写（与属性无关）
+    * 重写需要有继承关系，子类重写父类的方法
+  * 多态是方法的多态
+  * 父类和子类。必须有联系
+
+
+
+​      
+
+​      
+
+​      
