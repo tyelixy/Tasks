@@ -45,3 +45,11 @@ JavaScript：https://github.com/tyelixy/Tasks/blob/main/TASK4/geek%E7%BD%91%E7%A
 ### 第五阶段考核笔记：TASK5.md
 
 https://github.com/tyelixy/Tasks/blob/main/TASK5.md
+
+### 第六阶段考核笔记：TASK6
+
+https://github.com/tyelixy/Tasks/tree/main/TASK6
+
+练习：
+
+1. https://github.com/tyelixy/Tasks/tree/main/TASK6/test1
