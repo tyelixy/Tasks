@@ -53,5 +53,5 @@ https://github.com/tyelixy/Tasks/tree/main/TASK6
 练习：
 
 1. 运用requests和正则表达式获取猫眼电影排名信息https://github.com/tyelixy/Tasks/tree/main/TASK6/test1
-2. Ajax数据爬取，获取今日头条搜索结果图片
+2. Ajax数据爬取，获取今日头条搜索结果图片https://github.com/tyelixy/Tasks/tree/main/TASK6/test2
 
